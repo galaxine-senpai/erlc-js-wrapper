@@ -8,8 +8,8 @@ This is a simple API wrapper for the new ERLC API, this is my first NPM package 
 
 ### Example
 
-> ![IMPORTANT] \
-> This code has yet to be fully tested, and may not work as intended, please open an issue or a pull request with any issues you find
+> [!IMPORTANT]\
+> This code has yet to be fully tested, and may not work as intended, please open an issue or a pull request with any issues you find.
 
 
 ```javascript
