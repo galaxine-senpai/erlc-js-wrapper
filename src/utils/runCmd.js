@@ -6,8 +6,8 @@ const { apiURL, globalConfig } = require("../client.js");
  * @returns 
  */
 module.exports = (token, cmd) => {
-  return new Promise((resolve, reject) => {
-    const r = fetch.apiURL(`${apiURL}/server/command`, {
+  return new Promise( async (resolve, reject) => {
+    const r = await fetch(`${apiURL}/server/command`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

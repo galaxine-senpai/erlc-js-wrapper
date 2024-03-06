@@ -1,11 +1,11 @@
 const main = require("../client.js");
 
 /**
- * @class Client
+ * @class client
  * @property {string} Token - The token provided in your server settings
  */
 
-class Client {
+class client {
   /**
    * @constructor
    * @param {Client}
@@ -25,4 +25,4 @@ class Client {
   }
 }
 
-module.exports = Client;
+module.exports = client;

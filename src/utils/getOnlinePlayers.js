@@ -5,8 +5,8 @@ const { apiURL, globalConfig } = require("../client.js");
  * @returns {Promise<JSON>}
  */
 module.exports = (token) => {
-  return new Promise((resolve, reject) => {
-    const r = fetch(`${apiURL}/server/players`, {
+  return new Promise( async (resolve, reject) => {
+    const r = await fetch(`${apiURL}/server/players`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
