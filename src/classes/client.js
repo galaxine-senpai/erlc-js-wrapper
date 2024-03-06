@@ -28,7 +28,7 @@ class erlcClient {
    * @returns {globalConfig} - The globalConfig
    */
   getConfig() {
-    return main.globalConfig;
+    console.log(main.globalConfig); // This is just for debugging purposes and really shouldn't be used in prod
   }
 
   /**

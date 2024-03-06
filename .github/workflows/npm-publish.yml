@@ -4,7 +4,8 @@
 name: ERLC JS Wrapper
 
 on:
-  workflow_dispatch
+  release:
+    types: [created, edited, published]
 
 jobs:
   build:

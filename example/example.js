@@ -4,11 +4,6 @@ const Client = new client.init({
     token: 'your-token-here'
 })
 
-// Update the config
-Client.getConfig()
-
-// Now you should be able to use the client
-
 // Lets try getting the bans from the server
 Client.getServerBans().then(bans => {
     "Bans: " + console.log(bans)
