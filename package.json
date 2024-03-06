@@ -7,5 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "galaxine-senpai",
-  "license": "ISC"
+  "license": "MIT"
 }
