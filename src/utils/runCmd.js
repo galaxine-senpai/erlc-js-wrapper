@@ -17,7 +17,7 @@ module.exports = (token, cmd) => {
         command: cmd,
       }),
     });
-    if (r.status !== 200) return reject("API Returned: " + r.status);
+    if (r.status !== 200) return reject(new Error("[runCmd.js] API Returned: " + r.status));
     else return resolve(r.json());
   });
 };

@@ -14,7 +14,7 @@ module.exports = async (token) => {
           "Server-Key": globalConfig.token,
         },
       });
-      if (r.status !== 200) return reject("API Returned: " + r.status);
+      if (r.status !== 200) return reject(new Error("[getServerBans] API Returned: " + r.status));
       else return resolve(r.json());
     } catch (error) {
       return reject("API Error: " + error.message);
