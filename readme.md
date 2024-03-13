@@ -13,7 +13,7 @@ This is a simple API wrapper for the new ERLC API, this is my first NPM package 
 
 
 ```javascript
-const client = require('erlc-js-wrapper')
+const client = require('../index.js')
 
 const Client = new client.init({
     token: 'your-token-here'
@@ -37,6 +37,11 @@ Client.getPlayerQueue().then(queue => {
 // Now how about Kill Logs
 Client.getServerKL().then(killLogs => {
     "Kill Logs: " + console.log(killLogs)
+}).catch(console.error)
+
+// How about server info?
+Client.getServerInfo().then(info => {
+    "Server Info: " + console.log(info)
 }).catch(console.error)
 
 // Finally, lets run a command

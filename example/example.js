@@ -24,6 +24,11 @@ Client.getServerKL().then(killLogs => {
     "Kill Logs: " + console.log(killLogs)
 }).catch(console.error)
 
+// How about server info?
+Client.getServerInfo().then(info => {
+    "Server Info: " + console.log(info)
+}).catch(console.error)
+
 // Finally, lets run a command
 Client.runCmd(':h Hello World!').then(response => {
     "Command: " + console.log(response)
