@@ -1,4 +1,5 @@
 const { apiURL, globalConfig } = require("../client.js");
+const errorHandler = require('./errorHandler.js')
 
 /**
  * Run a command on the server
@@ -17,7 +18,7 @@ module.exports = (token, cmd) => {
         command: cmd,
       }),
     });
-    if (r.status !== 200) return reject(new Error("[runCmd.js] API Returned: " + r.status));
+    if (r.status !== 200) return reject(new Error(new Error(errorHandler(r.status))));
     else return resolve(r.json());
   });
 };

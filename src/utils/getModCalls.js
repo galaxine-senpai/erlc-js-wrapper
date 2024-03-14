@@ -1,4 +1,5 @@
 const { globalConfig, apiURL } = require('../client.js')
+const errorHandler = require('./errorHandler.js')
 
 module.exports = (token) => {
     return new Promise(async (resolve, reject) => {
@@ -9,7 +10,7 @@ module.exports = (token) => {
                 'Server-Key': globalConfig.token
             }
         })
-        if (r.status !== 200) return reject(new Error('[getServerKL] API Returned: ' + r.status))
+        if (r.status !== 200) return reject(new Error(new Error(errorHandler(r.status))))
         else return resolve(r.json())
     })
 }

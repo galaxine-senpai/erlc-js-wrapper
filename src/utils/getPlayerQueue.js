@@ -1,4 +1,5 @@
 const { apiURL, globalConfig } = require("../client.js");
+const errorHandler = require('./errorHandler.js')
 
 /**
  * Gets the players in the queue
@@ -13,7 +14,7 @@ module.exports = (token) => {
         "Server-Key": globalConfig.token,
       },
     });
-    if (r.status !== 200) return reject(new Error("[getPlayerQueue] API Returned: " + r.status));
+    if (r.status !== 200) return reject(new Error(new Error(errorHandler(r.status))));
     else return resolve(r.json());
   });
 };
