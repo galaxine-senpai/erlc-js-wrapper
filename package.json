@@ -1,11 +1,8 @@
 {
   "name": "erlc-js-wrapper",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "A JavaScript wrapper for the ER:LC API",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "galaxine-senpai",
   "license": "MIT"
 }
