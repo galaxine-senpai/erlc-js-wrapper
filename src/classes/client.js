@@ -79,6 +79,30 @@ class erlcClient {
   runCmd(command) {
     return main.runCmd(command);
   }
+
+  /**
+   * Get the list of vehicles spawned in the server.
+   * @returns {Promise<JSON>}
+   */
+  getVehicles() {
+    return main.getVehicles();
+  };
+
+  /**
+   * Get the list of mod calls
+   * @returns {Promise<JSON>}
+   */
+  getModCalls() {
+    return main.getModCalls();
+  };
+
+  /**
+   * Get the list of command logs
+   * @returns {Promise<JSON>}
+   */
+  getCommandLogs() {
+    return main.getCommandLogs();
+  };
 }
 
 module.exports = erlcClient;

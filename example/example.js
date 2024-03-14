@@ -29,6 +29,21 @@ Client.getServerInfo().then(info => {
     "Server Info: " + console.log(info)
 }).catch(console.error)
 
+// Hey lets try getting the vehicles in the server
+Client.getVehicles().then(vehicles => {
+    "Vehicles: " + console.log(vehicles)
+}).catch(console.error)
+
+// Now lets try getting the mod calls
+Client.getModCalls().then(calls => {
+    "Mod Calls: " + console.log(calls)
+}).catch(console.error)
+
+// Okay thats all fine and dandy but what about command logs?
+Client.getCommandLogs().then(logs => {
+    "Command Logs: " + console.log(logs)
+}).catch(console.error)
+
 // Finally, lets run a command
 Client.runCmd(':h Hello World!').then(response => {
     "Command: " + console.log(response)
