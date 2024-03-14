@@ -5,7 +5,7 @@ name: ERLC JS Wrapper
 
 on:
   release:
-    types: [created, edited, published]
+    types: [edited, published]
 
 jobs:
   build:
