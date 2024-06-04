@@ -1,4 +1,4 @@
-const client = require('../index.js')
+const client = require('erlc-js-wrapper')
 
 const Client = new client.init({
     token: 'your-token-here'
