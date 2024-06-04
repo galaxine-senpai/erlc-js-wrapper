@@ -1,5 +1,5 @@
 const { apiURL, globalConfig } = require("../client.js");
-const errorHandler = require('./errorHandler.js')
+const errorHandler = require("./errorHandler.js");
 
 /**
  * Get the server bans
@@ -15,7 +15,7 @@ module.exports = async (token) => {
           "Server-Key": globalConfig.token,
         },
       });
-      if (r.status !== 200) return reject(new Error(new Error(errorHandler(r.status))));
+      if (r.status !== 200) return reject(new Error(errorHandler(r.status)));
       else return resolve(r.json());
     } catch (error) {
       return reject("API Error: " + error.message);

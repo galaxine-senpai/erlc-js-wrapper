@@ -19,7 +19,8 @@ class erlcClient {
    */
   constructor(token) {
     if (!token) throw new Error("You must provide a token to the client!");
-    this.token = token;
+    this.token = token; //? The token provided in your server settings
+    this.debug = false; //? Debug mode // Default: false
     main.globalConfig = this.token;
   }
 
@@ -86,7 +87,7 @@ class erlcClient {
    */
   getVehicles() {
     return main.getVehicles();
-  };
+  }
 
   /**
    * Get the list of mod calls
@@ -94,7 +95,7 @@ class erlcClient {
    */
   getModCalls() {
     return main.getModCalls();
-  };
+  }
 
   /**
    * Get the list of command logs
@@ -102,7 +103,7 @@ class erlcClient {
    */
   getCommandLogs() {
     return main.getCommandLogs();
-  };
+  }
 }
 
 module.exports = erlcClient;
