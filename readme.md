@@ -11,9 +11,14 @@ This is a simple API wrapper for the new ERLC API, this is my first NPM package 
 > [!IMPORTANT]\
 > This code has yet to be fully tested, and may not work as intended, please open an issue or a pull request with any issues you find.
 
+Install command:
+```bash
+npm install erlc-js-wrapper
+```
+Example:
 
 ```javascript
-const client = require('../index.js')
+const client = require('erlc-js-wrapper')
 
 const Client = new client.init({
     token: 'your-token-here'
